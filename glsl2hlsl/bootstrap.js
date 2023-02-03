@@ -54,9 +54,17 @@
 /******/ 	var wasmImportObjects = {
 /******/ 		"../pkg/glsl2hlsl_wasm_bg.wasm": function() {
 /******/ 			return {
+/******/ 				"./snippets/glsl2hlsl-wasm-684981afa12c8924/www/file.js": {
+/******/ 					"reset": function() {
+/******/ 						return installedModules["../pkg/snippets/glsl2hlsl-wasm-684981afa12c8924/www/file.js"].exports["reset"]();
+/******/ 					}
+/******/ 				},
 /******/ 				"./glsl2hlsl_wasm_bg.js": {
 /******/ 					"__wbg_downloadfile_759000e02a450362": function(p0i32,p1i32,p2i32,p3i32) {
 /******/ 						return installedModules["../pkg/glsl2hlsl_wasm_bg.js"].exports["__wbg_downloadfile_759000e02a450362"](p0i32,p1i32,p2i32,p3i32);
+/******/ 					},
+/******/ 					"__wbg_downloadimage_6ab0862474133c29": function(p0i32,p1i32,p2i32,p3i32) {
+/******/ 						return installedModules["../pkg/glsl2hlsl_wasm_bg.js"].exports["__wbg_downloadimage_6ab0862474133c29"](p0i32,p1i32,p2i32,p3i32);
 /******/ 					},
 /******/ 					"__wbindgen_throw": function(p0i32,p1i32) {
 /******/ 						return installedModules["../pkg/glsl2hlsl_wasm_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
@@ -162,7 +170,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"../pkg/glsl2hlsl_wasm_bg.wasm":"fc401c184cf32cae9697"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"../pkg/glsl2hlsl_wasm_bg.wasm":"fd7744188be1264b1060"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {
